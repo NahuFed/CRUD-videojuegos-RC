@@ -48,8 +48,9 @@
   }
 
   .card img{
-    height: 30vh;
+    height: 50vh;    
     object-fit: cover;
+    object-position: bottom;
   }
 
   .card-title{
@@ -57,6 +58,8 @@
     font-family: 'Play', sans-serif;
   }
 
-#contenedor-cards{
-
+  @media screen and (max-width: 767px) {
+    .card {
+        width: 70vw;
+    }
 }
