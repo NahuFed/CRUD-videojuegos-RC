@@ -1,6 +1,10 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
-
+  
+  main{
+    display: flex;
+    justify-content: center;
+  }
 
   .css-button-sliding-to-left--red {
     min-width: 130px;
@@ -38,17 +42,18 @@
     background: #d90429;
   }
 
-  
 
   .card {
-    margin-bottom: 2rem;
-    width: 30vw;
+    display: flex;
+    flex-direction: column;          
     border: none;
     font-family: 'Play', sans-serif;
+    height: 100%;
   }
 
+
   .card img{
-    height: 50vh;    
+    height: 40vh;    
     object-fit: cover;
     object-position: bottom;
   }
@@ -56,6 +61,16 @@
   .card-title{
     font-weight: 700;
     font-family: 'Play', sans-serif;
+  }
+
+  aside{
+    width: fit-content;
+  }
+
+
+  #contenedor-cards{
+
+    width: 80%;
   }
 
   @media screen and (max-width: 767px) {

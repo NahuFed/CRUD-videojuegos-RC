@@ -72,15 +72,15 @@ class Videojuego {
   imprimirCard(){
     let contenedorCards = document.getElementById('contenedor-cards')
     let card = document.createElement('aside')
-    card.className='col-12 col-md-6 d-flex justify-content-center'
+    card.className='col-12 col-md-6 d-flex justify-content-center mb-5'
     card.innerHTML = `
-    <div class="card ">
+    <div class="card">
     <img src="${this.#imagen}" class="card-img-top" alt="...">
-    <div class="card-body">
+    <div class="card-body d-flex flex-column justify-content-between ">
       <h5 class="card-title">${this.#titulo}</h5>
-      <p class="card-text ">${this.#descripcion}</p>
+      <p class="card-text card-description">${this.#descripcion}</p>
       <p class="card-text text-start"><small class="text-body-secondary"><i class="bi bi-clock text-danger"></i>${this.#fechaPublicacion}</small></p>
-      <a href="#" class="btn css-button-sliding-to-left--red">Ver mas</a>
+      <a href="#" class="btn css-button-sliding-to-left--red align-self-start">Ver mas</a>
     </div>
     </div>`    
   contenedorCards.appendChild(card)
