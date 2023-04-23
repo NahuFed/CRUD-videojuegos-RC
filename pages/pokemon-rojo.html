@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="white">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -109,21 +109,21 @@
                 <article class="color-agua row rounded-4 mt-5 mt-lg-0">
                   <div class="col-6">
                     <div>
-                      <h5 class="text-dark">Fecha lanzamiento</h5>
+                      <h5 class="">Fecha lanzamiento</h5>
                       <p class="fw-bold">27 Febrero 1996</p>
                     </div>
                     <div>
-                      <h5 class="text-dark">Género</h5>
+                      <h5 class="">Género</h5>
                       <p class="fw-bold">Aventura ROL</p>
                     </div>
                   </div>
                   <div class="col-6">
                     <div>
-                      <h5 class="text-dark">Cantidad de pokemons</h5>
+                      <h5 class="">Cantidad de pokemons</h5>
                       <p class="fw-bold">151</p>
                     </div>
                     <div>
-                      <h5 class="text-dark">Clasificación</h5>
+                      <h5 class="">Clasificación</h5>
                       <img src="../img/clasificacion-everyone.svg.png" alt="">
                     </div>
                   </div>
@@ -132,8 +132,47 @@
             </div>
           </article>
         </section>
+        <section class="container border rounded-4">
+          <article class="p-3 p-md-5">
+            <h2 class="text-center">Dejanos tu reseña!</h2>
+            <form class="formulario" action="">
+              <div>
+                <label class="" for="nombre">Nombre</label>
+                <input name="nombre" id="nombre" class="form-control form-control-lg mb-4" type="text" placeholder="Ingresa tu nombre">
+              </div>
+              <div class="my-3">
+                <label class="opcion">
+                  <input type="radio" id="positivo" name="polaridad" value="positivo">
+                  <img src="../img/opcion-positiva.png">
+                </label>
+                <label class="opcion">
+                  <input type="radio" id="negativo" name="polaridad" value="negativo">
+                  <img src="../img/opcion-negativa.png">
+                </label>
+              </div>
+              <label class="" for="resenia">Ingresa la descripción de la tarea</label>
+              <textarea name="resenia" id="resenia" class="form-control form-control-lg mb-4" type="text" placeholder="Dejanos tu reseña!"></textarea>
+              <button class="btn btn-outline-primary">Dejar reseña</button>
+          </form> 
+          </article>
+          <article class="lista-tareas container row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3 d-flex justify-content-between">
+                  <h4 class="my-0 fw-normal">Silvio</h4>
+                  <div class="opcion opcion-elegida">
+                    <img src="../img/opcion-negativa.png">
+                  </div>
+              </div>
+                <div class="card-body">
+                  <p class="">La verda que una reverenda verga el juego loco</p>
+                </div>
+              </div>
+            </div>
+          </article> 
+        </section>
     </main>
-    <footer>
+    <footer class="mt-5">
         <section class="bg-black pt-4">
           <article class="container text-secondary">
             <article class="row">
