@@ -47,15 +47,16 @@ function crearComentario() {
   comentarios.forEach((element) => {
     cardComentario.innerHTML = `
     <div class="card-body">
-      <div class="d-flex flex-row justify-content-start">
-        <h6 class="text-start">${element.nombre}</h6> 
+      <div class="d-flex flex-row justify-content-start align-items-center">
+        <h6 class="text-start m-0">${element.nombre}</h6>
+        <i class="bi bi-check-circle-fill ms-1"></i>
         <p class="card-text mx-2">
           <small class="text-body-secondary"
             >Last updated 3 mins ago</small
           >
         </p>
       </div>
-      <p>${element.comentario}</p>
+      <p class="mt-3 mb-0">${element.comentario}</p>
     </div>
       `;
   });
@@ -68,15 +69,16 @@ function mostrarComentarios() {
     insertarComentario.innerHTML += `
     <article class="card border-top-0 border-start-0 border-end-0 px-2 rounded-0 py-3 shadow-sm">
         <div class="card-body">
-          <div class="d-flex flex-row justify-content-start">
-            <h6 class="text-start">${element.nombre}</h6> 
+          <div class="d-flex flex-row justify-content-start align-items-center">
+            <h6 class="text-start m-0">${element.nombre}</h6>
+            <i class="bi bi-check-circle-fill ms-1"></i>
             <p class="card-text mx-2">
               <small class="text-body-secondary"
                 >Last updated 3 mins ago</small
               >
             </p>
           </div>
-          <p>${element.comentario}</p>
+          <p class="mt-3 mb-0">${element.comentario}</p>
         </div>
     </article>
       `;

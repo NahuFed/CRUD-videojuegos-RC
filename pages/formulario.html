@@ -17,47 +17,94 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <!-- Boostrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <section class="container">
       <article class="row justify-content-center">
-        <aside class="col-md-4">
-          <h3>Agrega un comentario</h3>
-          <form id="formularioComentario">
-            <div class="">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input
-                type="text"
-                class="form-control"
-                id="nombre"
-                placeholder="Escribe aquí tu nombre"
-              />
-            </div>
-            <div class="">
-              <label
-                for="comentario"
-                class="form-label"
-              ></label>
-              <textarea
-                class="form-control"
-                id="comentario"
-                placeholder="Agrega un comentario"
-                rows="3"
-              ></textarea>
-            </div>
-            <div class="text-end">
-                <button class="btn btn-outline-danger mt-3" type="submit">
-                  Comentar
-                </button>
-            </div>
-          </form>
+        <aside class="col-md-8">
+          <a
+            role="button"
+            class="text-danger text-decoration-none"
+            data-bs-toggle="modal"
+            data-bs-target="#btnAddComment"
+          >
+            <div class="d-flex align-items-center">
+              <h5 class="m-0 me-1 text-dark">Agrega un comentario</h5>
+              <i class="bi bi-plus fs-3"></i></div
+          ></a>
         </aside>
       </article>
       <article class="row justify-content-center mt-2">
-        <aside class="col-md-8 my-3" id="insertarComentario">
-        </aside>
+        <aside class="col-md-8 my-3" id="insertarComentario"></aside>
       </article>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="btnAddComment"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Agrega tu comentario
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="formularioComentario">
+                <div class="">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    placeholder="Escribe aquí tu nombre"
+                  />
+                </div>
+                <div class="">
+                  <label for="comentario" class="form-label"></label>
+                  <textarea
+                    class="form-control"
+                    id="comentario"
+                    placeholder="Agrega un comentario"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="text-end">
+                  <button
+                    class="btn btn-danger mt-3"
+                    type="submit"
+                    data-bs-dismiss="modal"
+                  >
+                    Comentar
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary mt-3"
+                    data-bs-dismiss="modal"
+                  >
+                    Salir
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
