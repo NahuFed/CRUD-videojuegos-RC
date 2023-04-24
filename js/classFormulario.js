@@ -19,4 +19,10 @@ export default class Formulario{
     set comentario(nuevoComentario){
         this.#comentario = nuevoComentario;
     }
+    toJSON(){
+        return{
+            nombre: this.#nombre,
+            comentario: this.comentario
+        }
+    }
 }
