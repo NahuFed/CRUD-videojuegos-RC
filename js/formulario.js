@@ -2,7 +2,7 @@ import Formulario from "./classFormulario.js";
 
 let formulario = document.getElementById("formularioComentario"),
   comentarios = localStorage.getItem("comentarios"),
-  insertarComentario = document.getElementById("insertarComentario");
+  insertarComentario = document.getElementById("insertarComentario")
 
 if (!comentarios) {
   comentarios = [];
@@ -52,7 +52,7 @@ function crearComentario() {
         <i class="bi bi-check-circle-fill ms-1"></i>
         <p class="card-text mx-2">
           <small class="text-body-secondary"
-            >Last updated 3 mins ago</small
+            >${element.dia}/${element.mes}/${element.anio}</small
           >
         </p>
       </div>
@@ -74,7 +74,7 @@ function mostrarComentarios() {
             <i class="bi bi-check-circle-fill ms-1"></i>
             <p class="card-text mx-2">
               <small class="text-body-secondary"
-                >Last updated 3 mins ago</small
+                >${element.dia}/${element.mes}/${element.anio}</small
               >
             </p>
           </div>
