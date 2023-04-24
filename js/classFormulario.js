@@ -5,17 +5,22 @@ export default class Formulario{
     #mes
     #anio
     #valoracion
-    constructor(nombre, comentario, valoracion){
+    #imagen
+    constructor(nombre, comentario, valoracion, imagen){
         this.#nombre = nombre;
         this.#comentario = comentario;
         this.#dia = new Date().getDate();
         this.#mes = new Date().getMonth()+1;
         this.#anio = new Date().getFullYear();
         this.#valoracion = valoracion;
+        this.#imagen = imagen;
     }
     //getters
+    get imagen(){
+        return this.#imagen;
+    }
     get valoracion(){
-        return this.#valoracion
+        return this.#valoracion;
     }
     get dia(){
         return this.#dia;
@@ -33,6 +38,9 @@ export default class Formulario{
         return this.#comentario;
     }
     //setters
+    set imagen(nuevaImagen){
+        this.#imagen = nuevaImagen;
+    }
     set nombre(nuevoNombre){
         this.#nombre = nuevoNombre;
     }
@@ -58,7 +66,8 @@ export default class Formulario{
             dia: this.dia,
             mes: this.mes,
             anio: this.anio,
-            valoracion: this.#valoracion
+            valoracion: this.valoracion,
+            imagen: this.imagen
         }
     }
 }
