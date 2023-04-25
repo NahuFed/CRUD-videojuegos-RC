@@ -160,52 +160,9 @@
             data-bs-target="#btnAddComment"
           >
             <div class="d-flex align-items-center">
-              <h5 class="m-0 me-1 text-body-emphasis">Dejanos tu reseña</h5>
-              <i class="bi bi-plus fs-3"></i></div
+              <h2 class="m-0 me-1 text-body-secondary">Dejanos tu reseña</h2>
+              <i class="bi bi-plus fs-1"></i></div
           ></a>
-          <form id="formularioComentario">
-            <div>
-              <label class="" for="nombre">Nombre</label>
-              <input
-                name="nombre"
-                id="nombre"
-                class="form-control form-control-lg mb-4"
-                type="text"
-                placeholder="Ingresa tu nombre"
-              />
-            </div>
-            <div class="my-3 form-check">
-              <label class="opcion">
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  id="positivo"
-                  name="polaridad"
-                  value="positivo"
-                />
-                <img src="../img/opcion-positiva.png" />
-              </label>
-              <label class="opcion">
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  id="negativo"
-                  name="polaridad"
-                  value="negativo"
-                />
-                <img src="../img/opcion-negativa.png" />
-              </label>
-            </div>
-            <label class="" for="comentario">Escribí tu reseña</label>
-            <textarea
-              name="comentario"
-              id="comentario"
-              class="form-control form-control-lg mb-4"
-              type="text"
-              placeholder="Dejanos tu reseña!"
-            ></textarea>
-            <button class="btn btn-outline-primary">Dejar reseña</button>
-          </form>
         </article>
         <hr />
         <article
@@ -223,12 +180,13 @@
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Comentario de la Película
-              </h1>
+              <div class="modal-title" id="exampleModalLabel">
+                <h2 class="fs-5">Gracias por dejar tu reseña.</h2>
+                <p><small>Es muy importante para nosotros!</small></p>
+              </div>
               <button
                 type="button"
                 class="btn-close"
