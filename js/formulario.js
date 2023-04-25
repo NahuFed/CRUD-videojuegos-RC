@@ -51,32 +51,26 @@ function guardarComentario() {
 }
 
 function crearComentario() {
-  let cardComentario = document.createElement("article");
+  let cardComentario = document.createElement("div");
   cardComentario.classList.add(
     "card",
-    "border-top-0",
-    "border-start-0",
-    "border-end-0",
-    "px-2",
-    "rounded-0",
-    "py-3",
+    "mb-4",
+    "rounded-3",
     "shadow-sm"
   );
   comentarios.forEach((element) => {
     cardComentario.innerHTML = `
-    <div class="card-body">
-      <div class="d-flex flex-row justify-content-start align-items-center">
-        <h6 class="text-start m-0">${element.nombre}</h6>
-        <i class="bi bi-check-circle-fill ms-1"></i>
-        <p class="card-text mx-2">
-          <small class="text-body-secondary"
-            >${element.dia}/${element.mes}/${element.anio}</small
-          >
-        </p>
+    <div class="card-header py-3 d-flex justify-content-between">
+      <h4 class="my-0 fw-normal">${element.nombre}</h4>
+      <div class="opcion opcion-elegida">
+        <img src="${element.imagen}" />
       </div>
-      <p class="mt-3 mb-0">${element.comentario}</p>
     </div>
-      `;
+    <div class="card-body">
+      <p class="">${element.comentario}</p>
+      <p class="text-end"><small class="text-secondary">${element.dia}/${element.mes}/${element.anio}</small></p>
+    </div>
+    `;
   });
   insertarComentario.prepend(cardComentario);
 }
@@ -85,20 +79,18 @@ function mostrarComentarios() {
   let comentariosReverse = comentarios.reverse();
   comentariosReverse.forEach((element) => {
     insertarComentario.innerHTML += `
-    <article class="card border-top-0 border-start-0 border-end-0 px-2 rounded-0 py-3 shadow-sm">
-        <div class="card-body">
-          <div class="d-flex flex-row justify-content-start align-items-center">
-            <h6 class="text-start m-0">${element.nombre}</h6>
-            <i class="bi bi-check-circle-fill ms-1"></i>
-            <p class="card-text mx-2">
-              <small class="text-body-secondary"
-                >${element.dia}/${element.mes}/${element.anio}</small
-              >
-            </p>
-          </div>
-          <p class="mt-3 mb-0">${element.comentario}</p>
+    <div class="card mb-4 rounded-3 shadow-sm">
+      <div class="card-header py-3 d-flex justify-content-between">
+        <h4 class="my-0 fw-normal">${element.nombre}</h4>
+        <div class="opcion opcion-elegida">
+          <img src="${element.imagen}" />
         </div>
-    </article>
+      </div>
+      <div class="card-body">
+        <p class="">${element.comentario}</p>
+        <p class="text-end"><small class="text-secondary">${element.dia}/${element.mes}/${element.anio}</small></p>
+      </div>
+    </div>
       `;
   });
 }
