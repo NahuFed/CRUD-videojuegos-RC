@@ -3,14 +3,13 @@ import Formulario from "./classFormulario.js";
 let formulario = document.getElementById("formularioComentario"),
   comentarios = localStorage.getItem("comentarios"),
   insertarComentario = document.getElementById("insertarComentario"),
-  positivo = document.getElementById("positivo"),
-  negativo = document.getElementById("negativo")
+  positivo = document.getElementById("positivo")
 
 if (!comentarios) {
   comentarios = [];
 } else {
   comentarios = JSON.parse(comentarios).map(
-    (e) => new Formulario(e.nombre, e.comentario)
+    (e) => new Formulario(e.nombre, e.comentario, e.valoracion, e.imagen)
   );
   mostrarComentarios();
 }
@@ -92,5 +91,6 @@ function mostrarComentarios() {
       </div>
     </div>
       `;
-  });
+  })
+  console.log(comentariosReverse[0].valoracion)
 }
