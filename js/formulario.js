@@ -1,9 +1,14 @@
 import Formulario from "./classFormulario.js";
+import { sumarioValidaciones } from "./helpers.js";
 
 let formulario = document.getElementById("formularioComentario"),
   comentarios = localStorage.getItem("comentarios"),
   insertarComentario = document.getElementById("insertarComentario"),
-  positivo = document.getElementById("positivo")
+  positivo = document.getElementById("positivo"),
+  nombre = document.getElementById("nombre"),
+  comentario = document.getElementById("comentario"),
+  valoracion,
+  imagen
 
 if (!comentarios) {
   comentarios = [];
@@ -29,24 +34,34 @@ function positive(){
 }
 
 function guardarComentario() {
-  let nombre = document.getElementById("nombre");
-  let comentario = document.getElementById("comentario");
-  let valoracion;
-  let imagen;
-  if(document.getElementById('positivo').checked){
-    valoracion = "positiva"
-    imagen = "../img/opcion-positiva.png"
+  let listaErrores = sumarioValidaciones(nombre.value);
+  if(listaErrores.length === 0){
+    if(document.getElementById('positivo').checked){
+      valoracion = "positiva"
+      imagen = "../img/opcion-positiva.png"
+    }else{
+      valoracion = "negativo"
+      imagen = "../img/opcion-negativa.png"
+    }
+    console.log(valoracion);
+    let nombreIngresado = nombre.value;
+    let comentarioIngresado = comentario.value;
+    let nuevoComentario = new Formulario(nombreIngresado, comentarioIngresado, valoracion, imagen);
+    comentarios.push(nuevoComentario);
+    localStorage.setItem("comentarios", JSON.stringify(comentarios));
+    console.log(comentarios);
+    let alertaError = document.getElementById('alertMsjError');
+    let alerta = document.getElementById('alertMsjExitoso');
+    alertaError.className = 'alert alert-danger d-none';
+    alerta.className = 'alert alert-success'
+    alerta.innerHTML = 'Se agregó exitosamente tu comentario!';
   }else{
-    valoracion = "negativo"
-    imagen = "../img/opcion-negativa.png"
+    let alerta = document.getElementById('alertMsjExitoso');
+    let alertaError = document.getElementById('alertMsjError');
+    alerta.className = 'alert alert-success d-none'
+    alertaError.className = 'alert alert-danger';
+    alertaError.innerHTML = listaErrores;
   }
-  console.log(valoracion);
-  let nombreIngresado = nombre.value;
-  let comentarioIngresado = comentario.value;
-  let nuevoComentario = new Formulario(nombreIngresado, comentarioIngresado, valoracion, imagen);
-  comentarios.push(nuevoComentario);
-  localStorage.setItem("comentarios", JSON.stringify(comentarios));
-  console.log(comentarios);
 }
 
 function crearComentario() {
