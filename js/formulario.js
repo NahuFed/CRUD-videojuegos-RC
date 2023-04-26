@@ -31,7 +31,6 @@ function prepararDatos(e) {
 
 function positive(){
   positivo.setAttribute("checked", "")
-  console.log(document.getElementById('positivo').checked)
 }
 
 function guardarComentario() {
@@ -44,13 +43,11 @@ function guardarComentario() {
       valoracion = "negativo"
       imagen = "../img/opcion-negativa.png"
     }
-    console.log(valoracion);
     let nombreIngresado = nombre.value;
     let comentarioIngresado = comentario.value;
     let nuevoComentario = new Formulario(nombreIngresado, comentarioIngresado, valoracion, imagen);
     comentarios.push(nuevoComentario);
     localStorage.setItem("comentarios", JSON.stringify(comentarios));
-    console.log(comentarios);
     let alertaError = document.getElementById('alertMsjError');
     let alerta = document.getElementById('alertMsjExitoso');
     alertaError.className = 'alert alert-danger d-none';
@@ -108,5 +105,4 @@ function mostrarComentarios() {
     </div>
       `;
   })
-  console.log(comentariosReverse[0].valoracion)
 }

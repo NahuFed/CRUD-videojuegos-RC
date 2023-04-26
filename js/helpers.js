@@ -1,22 +1,17 @@
 function validarCantidadCaracteres(texto, min, max){
     if(texto.length >= min && texto.length <= max){
-        console.log('El texto tiene la cantidad de caracteres correctos');
         return true;
     }else{
-        console.log('El texto no está cumpliendo la validación');
         return false;
     }
 }
 
 function checked(positivo, negativo){
     if(positivo){
-        console.log('esta chequeado');
         return true;
     }else if(negativo){
-        console.log('esta chequeado negativo')
         return true;
     }else{
-        console.log('no está chequeado');
         return false
     }
 }
