@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pagina de videojuegos de pokemon">
+    <meta name="author" content="Nico Leonard, Ezequiel Monachesi, Silvio Javier Ruiz, Nahuel Rodriguez">
+    <meta name="keywords" content="practica git, js, html, css">
+    <title>Videojuegos Pokemon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="../index.html">
+              <img
+                src="../img/logo.png"
+                alt="Logo"
+                width="50"
+                height="50"
+                class="d-inline-block align-text-center"
+              />
+              <span class=""></span>PokeJuegos</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center text-md-start">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/sobreNosotros.html"
+                    >Sobre nosotros</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-moon-stars-fill"></i>
+                  </span>
+                  <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" id="btnThemeDark"><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
+                    <li><button class="dropdown-item" id="btnThemeLight"><i class="bi bi-brightness-high-fill"></i> Light</button></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container my-5 border rounded-4">
+          <article class="p-3 p-md-5">
+            <h1 class="text-center">Pokémon Diamante</h1>
+            <div class="mt-5 row">
+              <aside class="col-lg-6">
+                <img class="w-100" src="../img/pokemon_diamante.webp" alt="imagen de Groudon enojado">
+              </aside>
+              <aside class="col-lg-6">
+                <p class="mt-5 mt-lg-0">
+                    En Pokemon Diamante, el jugador asume el papel de un entrenador Pokemon que debe explorar la región de Sinnoh, capturar y entrenar Pokemon, luchar contra otros entrenadores y derrotar al Equipo Galaxia, una organización criminal que planea utilizar a los legendarios Pokemon Dialga y Palkia para controlar el tiempo y el espacio.<br>Entre las principales mejoras que Pokemon Diamante agregó a la serie Pokemon se encuentran:<br>La adición de un reloj interno: Este reloj interno permite a los jugadores experimentar cambios diurnos y nocturnos, así como ciclos de tiempo que afectan la aparición de ciertos Pokemon, eventos y condiciones climáticas.<br>La inclusión de la pantalla táctil: Pokemon Diamante es uno de los primeros juegos de la serie que utiliza la pantalla táctil de la consola Nintendo DS para interactuar con el juego. Esto permite a los jugadores realizar acciones en el juego de forma más intuitiva, como moverse, cambiar Pokemon o usar objetos.<br>La introducción de la función Wi-Fi: Con esta función, los jugadores pueden conectarse a Internet y participar en batallas y intercambios de Pokemon con otros jugadores de todo el mundo.<br>La mejora de los gráficos y la música: Pokemon Diamante presenta gráficos mejorados en comparación con sus predecesores, con animaciones más suaves y detalles más nítidos. La música también fue mejorada con una mayor variedad de temas y una calidad de sonido mejorada.
+                </p>
+                <article class="color-agua row rounded-4 mt-5 mt-lg-0">
+                  <div class="col-6">
+                    <div>
+                      <h5 class="">Fecha lanzamiento</h5>
+                      <p class="fw-bold">27 de Julio 2007</p>
+                    </div>
+                    <div>
+                      <h5 class="">Género</h5>
+                      <p class="fw-bold">Aventura ROL</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div>
+                      <h5 class="">Cantidad de pokemons</h5>
+                      <p class="fw-bold">493</p>
+                    </div>
+                    <div>
+                      <h5 class="">Clasificación</h5>
+                      <img src="../img/clasificacion-everyone.svg.png" alt="">
+                    </div>
+                  </div>
+                </article>
+              </aside>
+            </div>
+          </article>
+        </section>
+    </main>
+    <footer class="mt-5">
+        <section class="bg-black pt-4">
+          <article class="container text-secondary">
+            <article class="row">
+              <aside class="col-md-4 text-center">
+                <a href="index.html" class="d-flex flex-row align-items-center justify-content-center text-decoration-none text-secondary">
+                  <img src="../img/logo.png" alt="logo" width="50" class="me-1">
+                  <h3>PokeJuegos</h3>
+                </a>
+              </aside>
+              <aside class="col-md-4 text-center d-flex flex-row align-items-center justify-content-center mt-2 mt-md-none">
+                <a href="../pages/detallesPokemon.html" class="text-decoration-none text-secondary text-center">Categorías</a>
+              </aside>
+              <aside class="col-md-4 text-center d-flex flex-row align-items-center justify-content-center mt-2 mt-md-none">
+                <a href="../pages/sobreNosotros.html" class="text-decoration-none text-secondary text-center">Sobre nosotros</a>
+              </aside>
+              <aside class="d-flex flex-row justify-content-center mt-2 mt-md-none">
+                <p class="mx-2">Todos los derechos reservados</p><i class="bi bi-c-circle"></i>
+              </aside>
+            </article>
+          </article>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="app.js
+    "></script>
+</body>
+</html>
