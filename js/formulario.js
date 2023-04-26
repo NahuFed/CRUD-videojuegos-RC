@@ -5,6 +5,7 @@ let formulario = document.getElementById("formularioComentario"),
   comentarios = localStorage.getItem("comentarios"),
   insertarComentario = document.getElementById("insertarComentario"),
   positivo = document.getElementById("positivo"),
+  negativo = document.getElementById("negativo"),
   nombre = document.getElementById("nombre"),
   comentario = document.getElementById("comentario"),
   valoracion,
@@ -34,7 +35,7 @@ function positive(){
 }
 
 function guardarComentario() {
-  let listaErrores = sumarioValidaciones(nombre.value);
+  let listaErrores = sumarioValidaciones(nombre.value, comentario.value, positivo.checked, negativo.checked);
   if(listaErrores.length === 0){
     if(document.getElementById('positivo').checked){
       valoracion = "positiva"
