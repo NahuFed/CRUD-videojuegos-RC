@@ -99,7 +99,8 @@ export class Videojuego {
         fechaPublicacion: this.fechaPublicacion,
         imagen: this.imagen,
         genero: this.genero,
-        clasificacion: this.clasificacion
+        clasificacion: this.clasificacion,
+        identificador: this.identificador
     }
   }
   
