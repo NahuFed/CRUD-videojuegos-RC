@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pagina de videojuegos de pokemon">
+    <meta name="author" content="Nico Leonard, Ezequiel Monachesi, Silvio Javier Ruiz, Nahuel Rodriguez">
+    <meta name="keywords" content="practica git, js, html, css">
+    <title>Videojuegos Pokemon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="../index.html">
+              <img
+                src="../img/logo.png"
+                alt="Logo"
+                width="50"
+                height="50"
+                class="d-inline-block align-text-center"
+              />
+              <span class=""></span>PokeJuegos</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center text-md-start">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/sobreNosotros.html"
+                    >Sobre nosotros</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-moon-stars-fill" id="btnSelectTheme"></i>
+                  </span>
+                  <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" id="btnThemeDark"><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
+                    <li><button class="dropdown-item" id="btnThemeLight"><i class="bi bi-brightness-high-fill"></i> Light</button></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <main>
+      <section class="container-fluid px-2 mx-0 w-100 pt-4">
+        <article class="card text-center pt-3 px-2">
+          <h4>¡Bienvenidos a nuestra página Pokedex!</h4>
+          <p>
+            Somos un grupo de entrenadores Pokemon y futuros programadores, y
+            nuestro objetivo es crear la mejor página Pokedex que puedas
+            encontrar en línea. Como entrenadores Pokemon, estamos apasionados
+            por capturar, entrenar y aprender todo lo posible sobre cada Pokemon
+            que encontramos. <br /><i class="bi bi-record-circle fs-1"></i
+            ><br />
+            Pero también somos programadores en formación, y estamos emocionados
+            por aplicar nuestras habilidades para crear una experiencia de
+            usuario única y atractiva para nuestros visitantes. Nuestra página
+            Pokedex tendrá información detallada y precisa sobre cada Pokemon
+            que capturamos, pero también queremos que sea divertida y accesible
+            para todo tipo de fanáticos de Pokemon. ¡Así que únete a nuestra
+            aventura, y juntos podemos capturarlos a todos y crear una página
+            Pokedex que no podrás resistir explorar!
+          </p>
+        </article>
+      </section>
+      <section
+      class="container-fluid px-2 justify-content-center d-flex flex-row flex-wrap text-start mt-4 mb-4"
+    >
+      <span class="card col-8 col-sm-5 col-lg-3 border border-2">
+        <img
+          class="card-img-top"
+          src="../img/us/THQU1MGPN-U0468C0T4A2-66f3032dde25-512.jpg"
+          alt="foto de perfil"
+        />
+        <article class="card-body">
+          <h6 class="text-secondary">Nº001</h6>
+          <h5>Nahuel Rodriguez</h5>
+          <div class="w-75">
+            <span class="badge rounded-pill btn-color-agua w-auto border border-1 border-black"
+              >Camisa</span
+            >
+            <span class="badge rounded-pill text-bg-secondary w-auto border border-1 border-black"
+              >Afeitado</span
+            >
+          </div>
+          <a
+            class="btn css-button-sliding-to-left--red me-auto mt-2 w-auto border border-1 border-black"
+            href="./error404.html"
+            >Ver contacto</a
+          >
+        </article>
+      </span>
+      <span class="card col-8 col-sm-5 col-lg-3 border border-2">
+        <img
+          class="card-img-top"
+          src="../img/us/THQU1MGPN-U0469F6621Y-129534984660-512.jpg"
+          alt="foto de perfil"
+        />
+        <article class="card-body">
+          <h6 class="text-secondary">Nº002</h6>
+          <h5>Silvio Ruiz</h5>
+          <div class="w-75">
+            <span
+              class="badge rounded-pill bg-danger-subtle bg-gradient w-auto border border-1 border-black"
+              >Camisa</span
+            >
+            <span class="badge rounded-pill bg-dark-subtle bg-gradient w-auto border border-1 border-black"
+              >Barba</span
+            >
+          </div>
+          <a
+            class="btn css-button-sliding-to-left--red me-auto mt-2 w-auto border border-1 border-black"
+            href="./error404.html"
+            >Ver contacto</a
+          >
+        </article>
+      </span>
+      <span class="card col-8 col-sm-5 col-lg-3 border border-2">
+        <img
+          class="card-img-top"
+          src="../img/us/THQU1MGPN-U046C5N3N5T-1e5f89bdf2b1-512.jpg"
+          alt="foto de perfil"
+        />
+        <article class="card-body">
+          <h6 class="text-secondary">Nº033</h6>
+          <h5>Nicolas Leonard</h5>
+          <div class="w-75">
+            <span class="badge rounded-pill btn-color-planta w-auto border border-1 border-black"
+              >Remera</span
+            >
+            <span class="badge rounded-pill bg-dark-subtle bg-gradient w-auto border border-1 border-black"
+              >Barba</span
+            >
+          </div>
+          <a
+            class="btn css-button-sliding-to-left--red me-auto mt-2 w-auto border border-1 border-black"
+            href="./error404.html"
+            >Ver contacto</a
+          >
+        </article>
+      </span>
+      <span class="card col-8 col-sm-5 col-lg-3 border border-2">
+        <img
+          class="card-img-top"
+          src="../img/us/THQU1MGPN-U046ZLKE080-dff5838a38b0-512.jpg"
+          alt="foto de perfil"
+        />
+        <article class="card-body">
+          <h6 class="text-secondary">Nº001</h6>
+          <h5>Ezequiel Monachesi</h5>
+          <div class="w-75">
+            <span class="badge rounded-pill text-bg-light w-auto border border-1 border-black"
+              >Camisa</span
+            >
+            <span class="badge rounded-pill text-bg-secondary w-auto border border-1 border-black"
+              >Afeitado</span
+            >
+          </div>
+          <a
+            class="btn css-button-sliding-to-left--red me-auto mt-2 w-auto border border-1 border-black"
+            href="./error404.html"
+            >Ver contacto</a
+          >
+        </article>
+      </span>
+    </section>
+    </main>
+    <footer class="mt-5">
+        <section class="bg-black pt-4">
+          <article class="container text-secondary">
+            <article class="row">
+              <aside class="col-md-4 text-center">
+                <a href="index.html" class="d-flex flex-row align-items-center justify-content-center text-decoration-none text-secondary">
+                  <img src="../img/logo.png" alt="logo" width="50" class="me-1">
+                  <h3>PokeJuegos</h3>
+                </a>
+              </aside>
+              <aside class="col-md-4 text-center d-flex flex-row align-items-center justify-content-center mt-2 mt-md-none">
+                <a href="../pages/detallesPokemon.html" class="text-decoration-none text-secondary text-center">Categorías</a>
+              </aside>
+              <aside class="col-md-4 text-center d-flex flex-row align-items-center justify-content-center mt-2 mt-md-none">
+                <a href="../pages/sobreNosotros.html" class="text-decoration-none text-secondary text-center">Sobre nosotros</a>
+              </aside>
+              <aside class="d-flex flex-row justify-content-center mt-2 mt-md-none">
+                <p class="mx-2">Todos los derechos reservados</p><i class="bi bi-c-circle"></i>
+              </aside>
+            </article>
+          </article>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="app.js
+    "></script>
+    <script src="../js/cambio-tema.js"></script>
+</body>
+</html>

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
+
 .css-button-sliding-to-left--red{
   min-width: 130px;
   height: 40px;
-  color: #fff;
+  color: #f3efef;
   padding: 5px 10px;
   font-weight: bold;
   cursor: pointer;
@@ -13,7 +14,7 @@
   outline: none;
   border-radius: 0px;
   z-index: 0;
-  background: #fff;
+  background: #f3f3f3;
   overflow: hidden;
   border: 2px solid #d90429;
   color: #d90429;
@@ -72,4 +73,35 @@ aside{
       width: 80vw;      
   }
 
+}
+.color-agua {
+  background-color: #30A7D7;
+}
+
+.btn-color-agua {
+  background-color: #30A7D7;
+}
+.btn-color-agua:hover {
+  background-color: #278bb3;
+}
+
+.btn-color-planta {
+  background-color: #9BCC50;
+}
+.btn-color-planta:hover {
+  background-color: #80aa41;
+}
+
+.btn-color-electrico {
+  background-color: #EED535;
+}
+.btn-color-electrico:hover {
+  background-color: #c2ae2c;
+}
+
+.btn-color-veneno {
+  background-color: #8c00ff;
+}
+.btn-color-veneno:hover {
+  background-color: #6c00ff;
 }
