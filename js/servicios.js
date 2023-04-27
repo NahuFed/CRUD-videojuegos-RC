@@ -32,6 +32,8 @@ formularioBusqueda.addEventListener("submit", (eventito)=>{
                 Videojuego.genero.toUpperCase().includes(campoBusqueda.value.toUpperCase())){
 
                 Videojuego.imprimirCard();
+            }else{
+                contenedor.innerHTML = '<h1 class="text-center text-dark p-2">La busqueda no dio resultados</h1>';
             }
         });
     }
