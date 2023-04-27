@@ -51,8 +51,13 @@ function guardarComentario() {
     let alertaError = document.getElementById('alertMsjError');
     let alerta = document.getElementById('alertMsjExitoso');
     alertaError.className = 'alert alert-danger d-none';
-    alerta.className = 'alert alert-success'
+    alerta.className = 'alert alert-success';
+    nombre.value = '';
+    comentario.value = '';
+    positivo.removeAttribute('checked');
+    negativo.removeAttribute('checked');
     alerta.innerHTML = 'Se agregó exitosamente tu comentario!';
+    formulario.reset();
   }else{
     let alerta = document.getElementById('alertMsjExitoso');
     let alertaError = document.getElementById('alertMsjError');
@@ -65,23 +70,22 @@ function guardarComentario() {
 function crearComentario() {
   let cardComentario = document.createElement("div");
   cardComentario.classList.add(
-    "card",
-    "mb-4",
-    "rounded-3",
-    "shadow-sm"
+    "col-md-7"
   );
   comentarios.forEach((element) => {
     cardComentario.innerHTML = `
-    <div class="card-header py-3 d-flex justify-content-between">
-      <h4 class="my-0 fw-normal">${element.nombre}</h4>
-      <div class="opcion opcion-elegida">
-        <img src="${element.imagen}" />
+      <div class = "card mb-4 rounded-3 shadow-sm px-0">
+        <div class="card-header py-3 d-flex justify-content-between">
+          <h4 class="my-0 fw-normal">${element.nombre}</h4>
+          <div class="opcion opcion-elegida">
+            <img src="${element.imagen}" />
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="">${element.comentario}</p>
+          <p class="text-end"><small class="text-secondary">${element.dia}/${element.mes}/${element.anio}</small></p>
+        </div>
       </div>
-    </div>
-    <div class="card-body">
-      <p class="">${element.comentario}</p>
-      <p class="text-end"><small class="text-secondary">${element.dia}/${element.mes}/${element.anio}</small></p>
-    </div>
     `;
   });
   insertarComentario.prepend(cardComentario);
@@ -91,16 +95,18 @@ function mostrarComentarios() {
   let comentariosReverse = comentarios.reverse();
   comentariosReverse.forEach((element) => {
     insertarComentario.innerHTML += `
-    <div class="card mb-4 rounded-3 shadow-sm">
-      <div class="card-header py-3 d-flex justify-content-between">
-        <h4 class="my-0 fw-normal">${element.nombre}</h4>
-        <div class="opcion opcion-elegida">
-          <img src="${element.imagen}" />
+    <div class = "col-md-7">
+      <div class = "card mb-4 rounded-3 shadow-sm px-0">
+        <div class="card-header py-3 d-flex justify-content-between">
+          <h4 class="my-0 fw-normal">${element.nombre}</h4>
+          <div class="opcion opcion-elegida">
+            <img src="${element.imagen}" />
+          </div>
         </div>
-      </div>
-      <div class="card-body">
-        <p class="">${element.comentario}</p>
-        <p class="text-end"><small class="text-secondary">${element.dia}/${element.mes}/${element.anio}</small></p>
+        <div class="card-body">
+          <p class="">${element.comentario}</p>
+          <p class="text-end"><small class="text-secondary">${element.dia}/${element.mes}/${element.anio}</small></p>
+        </div>
       </div>
     </div>
       `;
