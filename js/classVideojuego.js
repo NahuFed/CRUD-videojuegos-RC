@@ -79,10 +79,10 @@ export class Videojuego {
   imprimirCard(){
     let contenedorCards = document.getElementById('contenedor-cards')
     let card = document.createElement('aside')
-    card.className='col-12 col-md-6 d-flex justify-content-center mb-5'
+    card.className='col-12 col-md-4 d-flex justify-content-center mb-5'
     card.innerHTML = `
     <div class="card">
-    <img src="${this.#imagen}" class="card-img-top" alt="...">
+    <img src="${this.#imagen}" class="card-img-top d-inline-block" alt="...">
     <div class="card-body d-flex flex-column justify-content-between ">
       <h5 class="card-title">${this.#titulo}</h5>
       <p class="card-text card-description">${this.#descripcion}</p>

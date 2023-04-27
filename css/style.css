@@ -18,6 +18,9 @@
   border: 2px solid #d90429;
   color: #d90429;
 }
+
+
+
 .css-button-sliding-to-left--red:hover {
   color: #fff;
 }
@@ -43,11 +46,12 @@
   border: none;
   font-family: 'Play', sans-serif;
   height: 100%;
+  
 }
 
 
 .card img{
-  height: 40vh;    
+  height: 45vh;    
   object-fit: cover;
   object-position: bottom;
 }
@@ -59,12 +63,13 @@
 
 aside{
   width: fit-content;
+  box-sizing: border-box;
 }
 
 
 @media screen and (max-width: 767px) {
   .card {
-      width: 70vw;
+      width: 80vw;      
   }
 
 }
