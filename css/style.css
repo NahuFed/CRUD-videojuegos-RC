@@ -44,15 +44,15 @@
 
 .opcion-elegida img {
     opacity: 1;
-
+}
 
   
-main{
+main {
   display: flex;
   justify-content: center;
 }
 
-.css-button-sliding-to-left--red {
+.css-button-sliding-to-left--red{
   min-width: 130px;
   height: 40px;
   color: #fff;

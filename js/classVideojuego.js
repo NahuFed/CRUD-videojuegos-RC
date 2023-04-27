@@ -5,6 +5,7 @@ export class Videojuego {
   #imagen;
   #genero;
   #clasificacion;
+  #identificador;
 
   constructor(
     titulo,
@@ -12,7 +13,8 @@ export class Videojuego {
     fechaPublicacion,
     imagen,
     genero,
-    clasificacion
+    clasificacion,
+    identificador
   ) {
     this.#titulo = titulo;
     this.#descripcion = descripcion;
@@ -20,6 +22,7 @@ export class Videojuego {
     this.#imagen = imagen;
     this.#genero = genero;
     this.#clasificacion = clasificacion;
+    this.identificador = identificador;
   }
   //getters
 
@@ -43,7 +46,9 @@ export class Videojuego {
   get clasificacion() {
     return this.#clasificacion;
   }
-
+  get identificador(){
+    return this.#identificador
+  }
   // setters
   set titulo(titulo) {
     this.#titulo = titulo;
@@ -68,7 +73,9 @@ export class Videojuego {
   set clasificacion(clasificacion) {
     this.#clasificacion = clasificacion;
   }
-
+  set identificador(identificador){
+    this.#identificador = identificador;
+  }
   imprimirCard(){
     let contenedorCards = document.getElementById('contenedor-cards')
     let card = document.createElement('aside')
@@ -80,7 +87,7 @@ export class Videojuego {
       <h5 class="card-title">${this.#titulo}</h5>
       <p class="card-text card-description">${this.#descripcion}</p>
       <p class="card-text text-start"><small class="text-body-secondary"><i class="bi bi-clock text-danger"></i>${this.#fechaPublicacion}</small></p>
-      <a href="#" class="btn css-button-sliding-to-left--red align-self-start">Ver mas</a>
+      <a href="../pages/${this.#identificador}.html" class="btn css-button-sliding-to-left--red align-self-start">Ver mas</a>
     </div>
     </div>`    
   contenedorCards.appendChild(card)
