@@ -1,8 +1,4 @@
-
-main {
-  display: flex;
-  justify-content: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
 .css-button-sliding-to-left--red{
   min-width: 130px;
@@ -65,11 +61,6 @@ aside{
   width: fit-content;
 }
 
-
-#contenedor-cards{
-
-  width: 80%;
-}
 
 @media screen and (max-width: 767px) {
   .card {
