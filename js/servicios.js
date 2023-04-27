@@ -25,17 +25,20 @@ formularioBusqueda.addEventListener("submit", (eventito)=>{
     eventito.preventDefault();
     if(campoBusqueda.value != null) {
         let contenedor = document.querySelector("#contenedor-cards");
-        contenedor.innerHTML = []
+        let resultados = 0;
+        contenedor.innerHTML = "";
         listaVideojuegos.forEach(Videojuego => {
+           
             if( Videojuego.titulo.toUpperCase().includes(campoBusqueda.value.toUpperCase()) || 
-                Videojuego.fechaPublicacion.toUpperCase().includes(campoBusqueda.value.toUpperCase()) ||  
+                Videojuego.fechaPublicacion.includes(campoBusqueda.value) ||  
                 Videojuego.genero.toUpperCase().includes(campoBusqueda.value.toUpperCase())){
 
                 Videojuego.imprimirCard();
-            }else{
-                contenedor.innerHTML = '<h1 class="text-center text-dark p-2">La busqueda no dio resultados</h1>';
+                resultados++
             }
         });
+
+        if(resultados === 0) contenedor.innerHTML = '<h1 class="text-center text-dark p-2">La busqueda no dio resultados</h1>';
     }
 
 })
