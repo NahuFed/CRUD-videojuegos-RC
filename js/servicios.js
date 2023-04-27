@@ -38,7 +38,7 @@ formularioBusqueda.addEventListener("submit", (eventito)=>{
             }
         });
 
-        if(resultados === 0) contenedor.innerHTML = '<h1 class="text-center text-dark p-2">La busqueda no dio resultados</h1>';
+        if(resultados === 0) contenedor.innerHTML = '<h1 class="text-center p-2">La busqueda no dio resultados</h1>';
     }
 
 })
